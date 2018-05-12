@@ -1,0 +1,95 @@
+.navigation {
+    font-size: 1.7rem;
+    background-image: linear-gradient(to right top, rgba($color-secondary-light, .5), rgba($color-primary-light, .5));
+    display: flex;
+    padding: 4rem 0;
+    justify-content: space-between;
+    align-content: center;
+    box-shadow: 0 .8rem 1rem rgba(0,0,0,.2);
+    z-index: 100;
+
+    &__list {
+        display: inline-flex;
+        flex: 1;
+        list-style: none;
+        justify-content: end;
+        margin-right: 2rem;
+        z-index: 10;
+
+        &-item {
+            &:not(:last-child){
+                margin-right: 2rem;
+            }
+            will-change: border-bottom, text-shadow;
+            transition: all .2s;
+        }
+
+        &-anchor:link,
+        &-anchor:visited {
+            font-size: 2rem;
+            padding-bottom: 0.5rem;
+            text-decoration: none;
+            color: #555;
+            transition: all .2s;
+        }
+
+        &-anchor:hover,
+        &-anchor:active {
+            border-bottom: 2px solid currentColor;
+            text-shadow: 0 .8rem 1rem rgba(0, 0, 0, .8);
+        }
+
+        &-item:hover,
+        &-itme:active {
+            transform: translateY(-10%);
+        }
+    }
+}
+
+.hero {
+    height: 70vh;
+    background-image: linear-gradient(to right bottom, rgba($color-secondary, .5), rgba($color-primary, .2)), url('../img/hero.jpeg');
+    background-position: bottom;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    color: #333;
+
+    &__content {
+        display: inline-block;
+        text-align: right;
+        position: absolute;
+        right: 10rem;
+        top: 10%;
+        width: 50%;
+    }
+
+    &__text {
+        font-weight: 100;
+        font-size: 5rem;
+        text-align: right;
+        text-transform: uppercase;
+
+        &--small {
+            font-size: 3rem;
+            font-weight: 100;
+        }
+    }
+
+    &__signup-btn:visited,
+    &__signup-btn:link {
+        display: inline-block;
+        border: 1px solid currentColor;
+        font-size: 1.7rem;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+        text-transform: uppercase;
+        transition: all .2s;
+    }
+
+    &__signup-btn:hover,
+    &__signup-btn:active {
+        background-color: #333;
+        color: #fff;
+    }
+}

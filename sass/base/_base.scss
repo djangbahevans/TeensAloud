@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%; // Set up 1rem to be equal to 10px
+}
+
+body {
+    box-sizing: border-box;
+}
